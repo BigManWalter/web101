@@ -1,0 +1,116 @@
+.gradient {
+  padding: 20px;
+  display: inline-block;
+  border-radius: 5px;
+  
+  /* You can use this tool to generate the CSS for gradients: http://www.colorzilla.com/gradient-editor/ */
+  background: linear-gradient(to bottom, rgba(208,228,247,1) 0%,rgba(115,177,231,1) 24%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 79%,rgba(135,188,234,1) 100%);
+}
+
+.rotate {
+  /* More on transforms at http://www.w3schools.com/cssref/css3_pr_transform.asp */
+  transform: rotate(45deg);
+  margin-left: 420px;
+}
+
+.blur {
+  /* More on filters at http://www.w3schools.com/cssref/css3_pr_filter.asp */
+  filter: blur(5px);
+}
+
+/* make our img change colours when hovered */
+img {
+  /* This transition property will make the hue change over 4 seconds instead of instantly. 
+  More information at http://www.w3schools.com/css/css3_transitions.asp */
+  transition: filter 4s;
+}
+
+img:hover {
+  filter: hue-rotate(360deg);
+}
+
+/* make our list spin when hovered */
+ol {
+  transition: transform 1s;
+  display: inline-block;
+}
+
+ol:hover {
+  transform: rotate3d(1,2,0.4, 180deg);
+}
+
+/* Make a link that moves away from the mouse when you hover over it */
+.frustrate {
+  padding-top: 20px;
+}
+
+.frustrate div {
+  height: 20px;
+}
+
+.frustrate div:hover {
+  height: 100px;
+}
+
+.frustrate .container:hover {
+  padding-top: 40px;
+}
+
+.frustrate a:focus {
+  font-size: 0;    /* Hide the original text when you click the link */
+}
+
+.frustrate a:focus::after {
+  content: "You did it!";  /* Show this text when you click the link */
+  font-size: medium;
+}
+
+/* Make a circular div for pacman's body. You can make an element a circle by setting the border radius to half the width and height. */
+.pacman {
+  position: absolute;
+  background: orange;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  
+  animation-name: move-pacman;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.pacman .mouth {
+  /* Below is a little CSS trick that draws a white triangle where pacman's mouth should be. */
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-right:10px solid white; 
+  position: relative;
+  left: 10px;
+  
+  animation-name: chomp-mouth;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+/* Make a CSS animation for pacman.
+More information at http://www.w3schools.com/css/css3_animations.asp */
+@keyframes move-pacman {
+  0%   { left:500px; top:200px; transform: rotate(0deg); }
+  23%  { left:700px; top:200px; transform: rotate(0deg); }
+  25%  { left:700px; top:200px; transform: rotate(-90deg); }
+  48%  { left:700px; top:10px; transform: rotate(-90deg); }
+  50%  { left:700px; top:10px; transform: rotate(-180deg); }
+  73%  { left:500px; top:10px; transform: rotate(-180deg); }
+  75%  { left:500px; top:10px; transform: rotate(-270deg); }
+  99% { left:500px; top:200px; transform: rotate(-270deg); }
+  100% { left:500px; top:200px; transform: rotate(0deg); }
+}
+
+@keyframes chomp-mouth {
+  0%   { border-right-width: 10px; }
+  100% { border-right-width: 50px; }
+}
