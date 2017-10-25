@@ -1,0 +1,127 @@
+
+
+.nav {
+    background-color: black;
+    color: white;
+    padding: 40px 15%;
+    line-height: 45px;
+}
+
+
+.nav .name {
+    font-weight: bold;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: gray;
+}
+
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav li {
+    display: inline;
+    margin-right: 60px;
+    font-size: 20px;
+}
+
+
+.nav img {
+    transform: translateY(8px);
+}
+
+
+html, body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-image: url('https://cdn.gomix.com/b07a12d5-7910-4ca6-9f1f-ae0aa2d99417%2Fcat-in-box.jpg');
+    background-size: cover;
+    background-position: 50% 30%;
+    padding: 150px 15%;
+    color: white;
+}
+
+.header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 80px;
+}
+
+.header p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.header a {
+    background-color: orange;
+    color: white;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.header a:hover {
+    background-color: black;
+}
+
+.features {
+    padding: 60px 15% 0px;
+    background-color: #fff9f1;
+}
+
+.feature {
+    border: 2px solid #7a7a7a;
+    width: 300px;
+    display: inline-block;
+    padding: 20px 40px;
+    margin-right: 50px;
+    margin-bottom: 60px;
+    vertical-align: top;
+    background-color: white;
+}
+
+.feature h2 {
+    font-size: 30px;
+}
+
+.feature p {
+    font-size: 20px;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 30px 15% 200px;
+}
+
+.footer a {
+    color: white;
+    font-weight: 600;
+}
+
+
+.footer a:hover {
+    color: orange;
+}
+
+.header-other-background {
+  background-image: url(http://www.readersdigest.ca/wp-content/uploads/2011/01/4-ways-cheer-up-depressed-cat.jpg);
+}
